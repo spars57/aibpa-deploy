@@ -4,7 +4,7 @@ services:
     ports:
       - 3000:3000
     environment:
-      - VITE_API_URL=http://aibpa-service:8080
+      - VITE_API_URL=http://localhost:8080
     depends_on:
       - aibpa-service
   aibpa-service:
@@ -18,9 +18,9 @@ services:
       - SALT=$2b$10$V0FxtY55l35skgYG9yQhu.
       - JWT_SECRET=jwt_secret
       - JWT_VALIDITY_PERIOD=60000
-      - AI_URL=http://aibpa-langflow:8081/ask
+      - AI_URL=http://localhost:8081/ask
       - RABBITMQ_URL=amqp://guest:guest@rabbitmq:5672/
-      - LANGFLOW_URL=http://aibpa-langflow:8081/ask
+      - LANGFLOW_URL=http://localhost:8081/ask
     depends_on:
       - rabbitmq
       - aibpa-langflow
