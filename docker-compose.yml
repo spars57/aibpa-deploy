@@ -1,0 +1,42 @@
+services:
+  aibpa-ui: 
+    image: brumoisao/aibpa-ui:latest
+    ports:
+      - 3000:3000
+    environment:
+      - VITE_API_URL=http://aibpa-service:8080
+    depends_on:
+      - aibpa-service
+  aibpa-service:
+    image: brumoisao/aibpa-service:latest
+    ports:
+      - 8080:8080
+    environment:
+      - PORT=8080
+      - NODE_ENV=development
+      - DATABASE_URL=prisma+postgres://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiZDc2ODEzOGYtNmViMC00ZmJjLTlkNjItZGVlZmQ3MTdiZDg3IiwidGVuYW50X2lkIjoiMmFlMzFjYjQ1NDZlNDEwMGYzZWUyMzg2NDMzY2JkYjVkNTQzZWMwMDY4YmFkOTNiMmZmMWI0Y2IzMGVjYmJmOSIsImludGVybmFsX3NlY3JldCI6ImEzODQ5MmQzLWEwNDctNGY1ZS1iNzM2LThlNDhmZjUzNDE5YSJ9.qFSBOwLVaplF_HEzROVeaHVcPsqrZeq75snKQkowUoY
+      - SALT=$2b$10$V0FxtY55l35skgYG9yQhu.
+      - JWT_SECRET=jwt_secret
+      - JWT_VALIDITY_PERIOD=60000
+      - AI_URL=http://aibpa-langflow:8081/ask
+      - RABBITMQ_URL=amqp://guest:guest@rabbitmq:5672/
+      - LANGFLOW_URL=http://aibpa-langflow:8081/ask
+    depends_on:
+      - rabbitmq
+      - aibpa-langflow
+  rabbitmq:
+    image: rabbitmq:4-management
+    container_name: rabbitmq
+    ports:
+      - '5672:5672' # Porta AMQP
+      - '15672:15672' # Porta do painel de administração (http://localhost:15672)
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+  aibpa-langflow:
+    image: brumoisao/aibpa-langflow:latest
+    ports:
+      - 8081:8081
+    environment:
+      - LANGFLOW_FLOW_ID=2d9b9ed6-8bd9-43bc-8fdf-5cfe7ec56a09
+      - LANGFLOW_API_KEY=sk-sYItD1u8aOoojQQpXv9dbNiais1VA6pAQW1c9Ep_3bo
