@@ -5,7 +5,6 @@ Este documento visa fornecer um guia com todos os procedimentos necessários par
 ## Tabela de Contéudos
 
 - Instalações e dependências necessárias
-- Configurações de ambiente necessárias
 - Acesso ao código fonte do projeto
 - Execução da interface gráfica
 - Execução do serviço de API
@@ -15,7 +14,7 @@ Este documento visa fornecer um guia com todos os procedimentos necessários par
 
 ### Node.js 22.17.0
 
-![Node.js Logo](https://nodejs.org/static/images/logo.svg)
+<img src="https://nodejs.org/static/images/logo.svg" width=300 style="border-radius: 12px"/>
 
 O Node.js é essencial para executar este projeto. Faça o download da versão LTS (Long Term Support) mais recente:
 
@@ -25,7 +24,7 @@ O Node.js é essencial para executar este projeto. Faça o download da versão L
 
 ### Docker Desktop
 
-![Docker Desktop Logo](./docs/docker-desktop.svg)
+<img src="./docs/docker-desktop.svg" width=300 style="border-radius: 12px"/>
 
 O Docker Desktop é necessário para executar o rabbitmq. Faça download da versão mais recente:
 
@@ -37,10 +36,22 @@ O Docker Desktop é necessário para executar o rabbitmq. Faça download da vers
 
 ### Langflow Desktop
 
-![Langflow Desktop Logo](./docs//langflow.jpg)
+<img src="./docs/langflow.jpg" width=300 style="border-radius: 12px"/>
 
 O Langflow é a plataforma utilizada para a criação e gestão de agentes AI, é necessário para a execução do projeto. Faça download da versão mais recente:
 
 [Download para Windows ou MacOS](https://www.langflow.org/desktop)
+
+É necessária uma conta no Langflow, pode criar a sua ao abrir a aplicação pela primeira vez.
+
+### Git
+
+<img src="./docs/git.png" width=300 style="border-radius: 12px"/>
+
+O Git é a ferramenta usada para a gestão do código fonte do projeto, é necessária para obter acesso ao mesmo, instale a versão mais recente:
+
+[Download para Windows, MacOS e Linux](http://git-scm.com/downloads)
+
+É necessária uma conta de Git, se ainda não tem uma poderá ser necessário registar-se [aqui](https://github.com).
 
 **Nota: Certifique-se que todas estas dependências estão corretamente instaladas antes de avançar para o próximo passo**
