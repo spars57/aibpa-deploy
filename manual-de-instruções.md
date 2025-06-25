@@ -55,3 +55,27 @@ O Git é a ferramenta usada para a gestão do código fonte do projeto, é neces
 É necessária uma conta de Git, se ainda não tem uma poderá ser necessário registar-se [aqui](https://github.com).
 
 **Nota: Certifique-se que todas estas dependências estão corretamente instaladas antes de avançar para o próximo passo**
+
+## Acesso ao código fonte
+
+Este projeto encontra-se dividio em 3 reposítórios de github.
+
+Interface Gráfica: http://github.com/spars57/aibpa-ui
+
+Serviço: http://github.com/spars57/aibpa-service
+
+Micro-Serviço Langflow: http://github.com/spars57/aibpa-langfow
+
+Para obter acesso ao código fonte basta clonar o reposítório através dos seguintes passos.
+
+1. Abrir o terminal com previlégios de administrador.
+2. Verificar se tem o git instalado executando o comando: `git version`.
+3. Criar uma pasta para guardar o código fonte através do comando: `mkdir fonte`.
+4. Entrar na pasta através do comando: `cd fonte`
+5. Clonar todo o código fonte executando os seguintes 3 comandos:
+
+- `git clone http://github.com/spars57/aibpa-ui`
+- `git clone http://github.com/spars57/aibpa-service`
+- `git clone http://github.com/spars57/aibpa-langflow`
+
+Após a execução destes comandos, ao entrar na pasta `fonte`deverá ver 3 pastas com os seguintes nomes: `aibpa-ui`, `aibpa-service`, `aibpa-langflow`.
