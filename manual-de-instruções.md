@@ -78,4 +78,32 @@ Para obter acesso ao código fonte basta clonar o reposítório através dos seg
 - `git clone http://github.com/spars57/aibpa-service`
 - `git clone http://github.com/spars57/aibpa-langflow`
 
-Após a execução destes comandos, ao entrar na pasta `fonte`deverá ver 3 pastas com os seguintes nomes: `aibpa-ui`, `aibpa-service`, `aibpa-langflow`.
+Após a execução destes comandos, a pasta `fonte`deverá ver 3 pastas com os seguintes nomes: `aibpa-ui`, `aibpa-service`, `aibpa-langflow`.
+
+## Como executar o projeto AIBPA-UI
+
+1. Abrir o terminal e ir até à pasta `fonte/aibpa-ui` criada previamente através da clonagem do reposítório.
+2. Instalar o `yarn` globalmente através do comando `npm install -g yarn` ( pode ser necessário correr este comando como administrador )
+3. Instalar todas as dependências do projeto através do comando `yarn`.
+4. Correr o projeto em `http://localhost:3000` através do comando `yarn dev`.
+5. Aceder à interface gráfica abrindo o seu navegador de internet e navegando até à página `http://localhost:3000`.
+
+## Como executar o projeto AIBPA-SERVICE
+
+1. Abrir o docker desktop na máquina local
+2. Abrir o terminal e ir até à pasta `fonte/aibpa-service`criada previamente através da clonagem do respositório.
+3. Instalar o `prisma` globalmente através do comando `npm install -g prisma`
+4. Instalar todas as depêndencias necessárias através do comando `yarn``
+5. Fazer build do projeto através do comando `yarn build`.
+6. Executar o docker-compose existente no projeto através do comando `docker compose up`.
+7. Abrir um segundo terminal e ir até à pasta `fonte/aibpa-service`.
+8. Executar o serviço através do comando `yarn dev`.
+
+## Como executar o serviço AIBPA-LANGFLOW
+
+1. Abrir a aplicação Langflow Desktop (todo)
+2. Criar um Agente AI (todo)
+3. Substituir as variavéis de ambiente
+4. Abrir o terminal e ir até à pasta `fonte/aibpa-langflow`
+5. Instalar as dependências através do comando `npm install`
+6. Correr o projeto através do comando `npm start`
